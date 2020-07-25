@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  turn-server:
+    image: turn_server:latest
+    container_name: "turn_server"
+    entrypoint: "/app/app"
+    command: "-public-ip 23.98.66.159 -users username=password"
+    ports:
+      - 3478:3478
+    
